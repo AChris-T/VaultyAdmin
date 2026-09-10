@@ -32,6 +32,14 @@
   --muted-foreground: #6b6b70;
 }
 
+html:has(.auth-layout),
+body:has(.auth-layout) {
+  --background: #ffffff;
+  --foreground: #030e29;
+  background: #ffffff;
+  color: #030e29;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

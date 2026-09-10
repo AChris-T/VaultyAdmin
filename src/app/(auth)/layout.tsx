@@ -4,7 +4,7 @@ import AuthShowcase from '@/features/auth/components/showcase';
 
 export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
-    <div className="auth-layout flex max-h-[100vh] flex-col bg-white text-black font-gellix lg:flex-row">
+    <div className="auth-layout flex min-h-dvh flex-col bg-white text-black font-gellix lg:flex-row">
       <div className="hidden lg:flex lg:flex-1">
         <AuthShowcase />
       </div>

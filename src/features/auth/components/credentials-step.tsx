@@ -36,9 +36,6 @@ export default function CredentialsStep({
     loginMutation.mutate(result.data, { onSuccess: onChallenge });
   };
 
-  // The server's own field-level errors (RFC 7807 `errors[]`), keyed the
-  // same way the client-side zod errors above are, so either can fill the
-  // same `error` prop on each field.
   const serverFieldErrors: Record<string, string> = {};
   for (const issue of loginMutation.error?.errors ?? []) {
     serverFieldErrors[issue.path] = issue.message;
@@ -68,11 +65,11 @@ export default function CredentialsStep({
         required
       />
 
-      <div className="flex items-center justify-end">
+      {/*    <div className="flex items-center justify-end">
         <a href="#" className="text-xs font-medium text-brand hover:underline">
           Forgot password?
         </a>
-      </div>
+      </div> */}
 
       <Button type="submit" loading={loginMutation.isPending}>
         {loginMutation.isPending ? 'Continuing…' : 'Continue'}
