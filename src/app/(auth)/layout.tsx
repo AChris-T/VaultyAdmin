@@ -4,11 +4,11 @@ import AuthShowcase from '@/features/auth/components/showcase';
 
 export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
-    <div className="flex max-h-[100vh] flex-col text-black font-gellix lg:flex-row">
+    <div className="auth-layout flex max-h-[100vh] flex-col bg-white text-black font-gellix lg:flex-row">
       <div className="hidden lg:flex lg:flex-1">
         <AuthShowcase />
       </div>
-      <div className="no-scrollbar flex flex-1 flex-col items-center justify-center gap-8 overflow-y-auto px-6 py-10">
+      <div className="no-scrollbar flex flex-1 flex-col items-center justify-center gap-8 bg-white overflow-y-auto px-6 py-10">
         <Image
           src={'/icons/Vaultly.svg'}
           alt="logo"
