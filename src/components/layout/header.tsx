@@ -4,7 +4,6 @@ import { IconMenu } from '@/components/ui/icons';
 import HeaderClock from './header-clock';
 import HeaderSearch from './header-search';
 import NotificationsMenu from './notifications-menu';
-import ThemeToggle from './theme-toggle';
 import UserMenu from './user-menu';
 
 export default function Header({
@@ -31,7 +30,6 @@ export default function Header({
 
       <div className="justify-end w-full flex items-center gap-1.5 sm:gap-3">
         <NotificationsMenu />
-        <ThemeToggle />
         <div className="mx-1 h-6 w-px bg-border" />
         <UserMenu />
       </div>
